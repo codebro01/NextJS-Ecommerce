@@ -1,6 +1,5 @@
 'use client'
 import { useEffect } from "react";
-import type { Metadata } from "next";
 import { Geist, Geist_Mono, Gabarito, Noto_Sans, Ubuntu_Mono, Outfit} from "next/font/google";
 import "./globals.css";
 import { Navbar } from "components/navbar";
