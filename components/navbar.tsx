@@ -17,6 +17,7 @@ import { useThemeStore } from "hooks/useThemeStore";
 export const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
   const [navActive, setNavActive] = useState(false);
+  const [searchPageIsOpen, setSearchPageIsOpen] = useState(false);
   const { mode, toggleMode } = useThemeStore();
   let darkMode;
   if (mode === "dark") darkMode = true;
@@ -77,13 +78,13 @@ export const Navbar = () => {
             </ul>
 
           </div>
-          <div className="search font-ubuntu md:order-3 order-1 py-[10px] text-gray-900 dark:text-gray-100 font-bold">
+          <div className="search cursor-pointer font-ubuntu md:order-3 order-1 py-[10px] text-gray-900 dark:text-gray-100 font-bold">
             <input
               type="search"
               name=""
               id=""
               placeholder="search"
-              className="dark:bg-light-dark-500  border-2 md:rounded-full border-main-500 rounded-[5px] outline-0 text-[14px] py-1 px-2 dark:placeholder:text-offWhite-500"
+              className="dark:bg-light-dark-500 cursor-pointer  border-2 md:rounded-full border-main-500 rounded-[5px] outline-0 text-[14px] py-1 px-2 dark:placeholder:text-offWhite-500"
 
             />
           </div>

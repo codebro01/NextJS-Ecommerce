@@ -41,7 +41,7 @@ export const PickedForUItemsComponent = ({
 
         {isHovered && <AddToCartComponent />}
       </div>
-      <div className="item-info z-10 flex flex-col gap-[10px] p-2 pt-1">
+      <div className="item-info flex flex-col gap-[10px] p-2 pt-1">
         <h5 className="name text-[14px] text-gray-900 md:text-[16px] dark:text-gray-100">
           {name}
         </h5>

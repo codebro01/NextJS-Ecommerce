@@ -41,7 +41,7 @@ export const ItemComponent = ({img, price, name, discount}: ItemComponentProps) 
             )}
            
           </div>
-          <div className="item-info flex flex-col gap-[10px] z-10 pt-1 p-2 ">
+          <div className="item-info flex flex-col gap-[10px]  pt-1 p-2 ">
              <h5 className="name text-[14px] text-gray-900 md:text-[16px] dark:text-gray-100 ">
             {name}
           </h5>
