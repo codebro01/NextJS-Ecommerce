@@ -4,9 +4,9 @@ import { Geist, Geist_Mono, Gabarito, Noto_Sans, Ubuntu_Mono, Outfit} from "next
 import "./globals.css";
 import { Navbar } from "components/navbar";
 import { useThemeStore } from "hooks/useThemeStore";
-
-
-
+import { Footer } from "components/footer";
+import { useSearchPageState } from "hooks/useSearchPageState";
+import { SearchPageComponent } from "components/searchPageComponent";
 
 
 
@@ -49,7 +49,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
+  
   const {mode} = useThemeStore();
     useEffect(() => {
     // Apply/remove the dark class based on Zustand state
@@ -59,14 +59,22 @@ export default function RootLayout({
     }
   }, [mode]);
 
-  // console.log(mode)
+  const {open: searchPageIsOpen} = useSearchPageState();
+
+
+
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${gabarito.variable} ${notoSans.variable} ${ubuntuMono.variable} ${outfit.variable} bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${gabarito.variable} ${notoSans.variable} ${ubuntuMono.variable} ${outfit.variable} bg-gray-100 dark:bg-neutral-950 text-neutral-950 dark:text-gray-100 antialiased relative ${searchPageIsOpen ? 'blur-bg': ''}`}
       >
+
         <Navbar />
+        {searchPageIsOpen && (<SearchPageComponent/>)}
+        
         {children}
+        <Footer/>
       </body>
     </html>
   );
