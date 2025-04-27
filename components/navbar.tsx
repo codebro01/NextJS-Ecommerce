@@ -52,7 +52,7 @@ export const Navbar = () => {
                 >
             <Link href={"#"} className="font-gabarito text-gray-900 dark:text-gray-100 font-medium">Category</Link>
             <ChevronDown className="text-gray-900 dark:text-gray-100 font-medium" />
-            <ul className={`dropdown-container grid grid-cols-3 bg-white dark:bg-light-dark-500 dark:text-offWhite-500 absolute top-[100%]  border-t-2 rounded-b-sm border-main-500 left-[50%] transform translate-x-[-50%] min-w-full md:min-w-[400px]  p-3  ${dropdown.category ? 'grid' : 'hidden'}`}>
+            <ul className={`dropdown-container grid grid-cols-3 bg-white dark:bg-black dark:text-offWhite-500 absolute top-[100%]  border-t-2 rounded-b-sm border-main-500 left-[50%] transform translate-x-[-50%] min-w-full md:min-w-[400px]  p-3  ${dropdown.category ? 'grid' : 'hidden'}`}>
                 <li>
                     <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium" >Item 1</Link>
                 </li>

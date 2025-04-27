@@ -6,6 +6,7 @@ import { AddToCartComponent } from "./addToCartComponent";
 import { DiscountComponent } from "./discountComponent";
 
 type itemsProps = {
+  id:string;
   img: string;
   name: string;
   discount: number;
@@ -17,6 +18,7 @@ export const PickedForUItemsComponent = ({
   name,
   discount,
   price,
+  id,
 }: itemsProps) => {
   const [liked, setLiked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +41,7 @@ export const PickedForUItemsComponent = ({
           className="rounded-t-sm object-cover transition delay-150 duration-300 ease-in-out"
         />
 
-        {isHovered && <AddToCartComponent />}
+        {isHovered && <AddToCartComponent id = {id} />}
       </div>
       <div className="item-info flex flex-col gap-[10px] p-2 pt-1">
         <h5 className="name text-[14px] text-gray-900 md:text-[16px] dark:text-gray-100">

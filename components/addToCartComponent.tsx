@@ -2,7 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { ShoppingCart, CircleAlert } from "lucide-react";
 
-export const AddToCartComponent = () => {
+
+
+export const AddToCartComponent = ({id}: {id: string} ) => {
+    console.log(id)
   return (
    <div
               className={`flex z-5, animate__animated animate__fadeInUp animate__faster absolute bottom-0 left-0  w-full items-center justify-around gap-[10px] bg-[#000000e8] py-[5px]  `}
@@ -13,8 +16,8 @@ export const AddToCartComponent = () => {
                 </p>
                 <ShoppingCart size={20} className="text-main-500" />
               </div>
-              <Link href={"/#"}>
+              <Link href={`/items-info/${id}`}>
                 <CircleAlert size={20} className="text-main-500" />
               </Link>
-            </div>    )
+            </div> )
 }
