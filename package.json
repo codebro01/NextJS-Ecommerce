@@ -10,6 +10,7 @@
     "prettier": "npx prettier --write **/*.tsx"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
     "animate.css": "^4.1.1",
     "lucide-react": "^0.487.0",
     "next": "15.3.0",

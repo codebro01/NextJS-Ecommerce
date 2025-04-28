@@ -24,7 +24,7 @@ export const ItemComponent = ({img, price, name, discount, id}: ItemComponentPro
 
   return (
      <div
-          className="featuredProductItem relative flex flex-col bg-gray-200 dark:bg-neutral-900 shadow-md "
+          className="featuredProductItem relative flex flex-col bg-gray-200 dark:bg-neutral-900 shadow-md rounded-b-sm"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -33,9 +33,9 @@ export const ItemComponent = ({img, price, name, discount, id}: ItemComponentPro
               src={
                 img
               }
-              alt="image.name"
+              alt={name}
               fill
-              className="w-[160px] md:w-[200px] lg:w-[250px] transition delay-150 duration-300 ease-in-out object-cover "
+              className="w-[160px] md:w-[200px] rounded-t-sm lg:w-[250px] transition delay-150 md:h-[150px] duration-300 ease-in-out object-cover "
             />
             {isHovered && (
           <AddToCartComponent id={id}/>
@@ -43,7 +43,7 @@ export const ItemComponent = ({img, price, name, discount, id}: ItemComponentPro
            
           </div>
           <div className="item-info flex flex-col gap-[10px] pt-1 p-2 ">
-             <h5 className="name text-[14px] text-gray-900 md:text-[16px] dark:text-gray-100 ">
+             <h5 className="name text-[14px] text-gray-900 md:text-[13px] dark:text-gray-100 ">
             {name}
           </h5>
           <h2 className="price text-[13px] font-bold text-gray-900 md:text-[18px] dark:text-gray-100">
