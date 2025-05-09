@@ -30,22 +30,27 @@ export const ImageSpliderComponent = ({ ItemsData }: itemsDataType) => {
           autoplay: true,
           autoHeight: true,
           mediaQuery: "max",
-          fixedWidth: 150,
+          pagination:false,
+          // fixedWidth: 150,
 
           breakpoints: {
+            1300: {
+              width: "70vw",
+              perPage: 6,
+            },
             1100: {
-              width: "50vw",
-              perPage: 4,
+              width: "80vw",
+              perPage: 5,
             },
             899.98: {
-              perPage: 3,
-              width: "60vw",
+              perPage: 4,
+              width: "80vw",
             },
             549.98: {
               perPage: 3,
               width: "90vw",
               gap: "0.5rem",
-              fixedWidth: 350,
+              // fixedWidth: 350,
             },
           },
         }}

@@ -27,8 +27,8 @@ export const Navbar = () => {
   // if (mode === "dark") darkMode = true;
   return (
     <>
-    <nav className="flex w-full items-center justify-center bg-white dark:bg-black dark:text-white md:px-[50px] fixed z-10">
-      <div className="nav-content-container w-full  top-0 left-0 z-10 flex items-center justify-around gap-2 md:px-5 h-full flex-wrap">
+    <nav className="flex w-full  items-center justify-center bg-white dark:bg-black dark:text-white md:px-[50px] fixed z-10">
+      <div className="nav-content-container max-w-[1400px] w-full  top-0 left-0 z-10 flex items-center justify-around gap-2 md:px-5 h-full flex-wrap">
         <div
           className="icon col-span-2 md:hidden text-gray-900 dark:text-gray-100 font-medium"
           onClick={() => setNavActive(!navActive)}
