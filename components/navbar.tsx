@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { useThemeStore } from "hooks/useThemeStore";
 import { useSearchPageState } from "hooks/useSearchPageState";
+import { useCartControl } from "hooks/useCartControl";
 
 
 export const Navbar = () => {
@@ -23,6 +24,7 @@ export const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
   const { mode, toggleMode } = useThemeStore();
   const {toggleOpen: toggleSearchPage} = useSearchPageState(); 
+  const {cart} = useCartControl();
   // let darkMode;
   // if (mode === "dark") darkMode = true;
   return (
@@ -115,17 +117,19 @@ export const Navbar = () => {
 
             {dropdown.account && (
               <ul className="account-dropdown absolute top-[100%] left-[50%] transform translate-x-[-50%] rounded-b-sm border-t-2 border-main-500 flex flex-col justify-center bg-white dark:bg-black w-[60vw] md:w-[100px] font-gabarito gap-3 p-2 text-neutral-950 dark:text-gray-100">
-                <Link href={'/login'} className="dark:bg-neutral-900 bg-gray-200 p-2 ">Login</Link>
-                <Link href={'/signup'} className="dark:bg-neutral-900 bg-gray-200 p-2">Sign up</Link>
+                <Link href={'/auth/login'} className="dark:bg-neutral-900 bg-gray-200 p-2 ">Login</Link>
+                <Link href={'/auth/signup'} className="dark:bg-neutral-900 bg-gray-200 p-2">Sign up</Link>
             </ul>
             )}
           </div>
         </div>
         <div className="flex items-center justify-around  gap-[5vw] md:gap-[3vw]">
+          <Link href={'/cart'}>
           <div className="cart cursor-pointer bg-main-500 px-6 py-[7px] rounded-sm relative">
             <ShoppingCart className="text-gray-100 dark:text-neutral-950" />
-            <span className = 'cartItems bg-transparent font-gabarito text-white dark:text-neutral-950 flex justify-center items-center px-2 absolute top-[-1px] right-[7px] text-[12px]'>0</span>
+            <span className = 'cartItems bg-transparent font-gabarito text-white dark:text-neutral-950 flex justify-center items-center px-2 absolute top-[-1px] right-[7px] text-[12px]'>{cart.length}</span>
           </div>
+          </Link>
           <div className="toggle-mode cursor-pointer text-gray-900 dark:text-gray-100 font-medium" onClick={() => toggleMode()}>
             {mode === "dark" ? <LightIcon /> : <NightIcon />}
           </div>

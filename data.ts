@@ -4,6 +4,7 @@ interface itemsData {
   name: string;
   discount: number;
   img: string;
+  quantity: number;
 }
 
 export const ItemsData: itemsData[] = [
@@ -12,6 +13,7 @@ export const ItemsData: itemsData[] = [
     name: "givency brown bag",
     discount: -20,
     img: "https://cdn.pixabay.com/photo/2015/08/10/20/14/handbag-883113_1280.jpg",
+    quantity: 1, 
     id: "1",
   },
   {
@@ -19,6 +21,7 @@ export const ItemsData: itemsData[] = [
     name: "Givenchy Bag",
     discount: -10,
     img: "https://cdn.pixabay.com/photo/2015/08/10/20/15/handbag-883116_1280.jpg",
+    quantity: 1, 
     id: "2",
   },
   {
@@ -26,6 +29,7 @@ export const ItemsData: itemsData[] = [
     name: "Givenchy Bag",
     discount: -10,
     img: "https://cdn.pixabay.com/photo/2015/08/10/20/15/handbag-883116_1280.jpg",
+    quantity: 1, 
     id: "8",
   },
   {
@@ -33,6 +37,7 @@ export const ItemsData: itemsData[] = [
     name: "Givenchy Bag",
     discount: -10,
     img: "https://cdn.pixabay.com/photo/2015/08/10/20/15/handbag-883116_1280.jpg",
+    quantity: 1, 
     id: "9",
   },
   {
@@ -40,6 +45,7 @@ export const ItemsData: itemsData[] = [
     name: "Red Sweater",
     discount: -20,
     img: "https://cdn.pixabay.com/photo/2020/03/27/09/43/boy-4973056_1280.jpg",
+quantity: 1, 
 
     id: "3",
   },
@@ -48,6 +54,7 @@ export const ItemsData: itemsData[] = [
     name: "givency brown bag",
     discount: -20,
     img: "https://cdn.pixabay.com/photo/2017/05/23/10/53/t-shirt-design-2336850_640.jpg",
+    quantity: 1, 
     id: "4",
   },
   {
@@ -55,6 +62,7 @@ export const ItemsData: itemsData[] = [
     name: "givency brown bag",
     discount: -25,
     img: "https://cdn.pixabay.com/photo/2023/08/10/00/19/japanese-8180481_640.jpg",
+    quantity: 1, 
     id: "5",
   },
   {
@@ -62,6 +70,7 @@ export const ItemsData: itemsData[] = [
     name: "givency brown bag",
     discount: -25,
     img: "https://cdn.pixabay.com/photo/2023/08/10/00/19/japanese-8180481_640.jpg",
+    quantity: 1, 
     id: "6",
   },
   {
@@ -69,6 +78,7 @@ export const ItemsData: itemsData[] = [
     name: "Men Jean Trouser",
     discount: 15,
     img: "https://cdn.pixabay.com/photo/2019/03/12/13/26/jeans-4050815_1280.jpg",
+    quantity: 1, 
     id: "7",
   },
 ];

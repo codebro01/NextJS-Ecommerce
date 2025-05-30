@@ -11,10 +11,11 @@ type ItemComponentProps = {
   name: string;
   discount: number;
   id: string,
+  quantity: number,
 }
 
 
-export const ItemComponent = ({img, price, name, discount, id}: ItemComponentProps) => {
+export const ItemComponent = ({img, price, name, discount, id, quantity}: ItemComponentProps) => {
         const [isHovered, setIsHovered] = useState(false);
 
 
@@ -38,7 +39,7 @@ export const ItemComponent = ({img, price, name, discount, id}: ItemComponentPro
               className="w-[160px] md:w-[200px] rounded-t-sm lg:w-[250px] transition delay-150 md:h-[150px] duration-300 ease-in-out object-cover "
             />
             {isHovered && (
-          <AddToCartComponent id={id}/>
+          <AddToCartComponent img ={img} price = {price} name = {name} quantity = {quantity} discount = {discount} id={id}/>
             )}
            
           </div>
