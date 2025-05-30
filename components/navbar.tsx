@@ -14,7 +14,7 @@ import Link from "next/link";
 import { useThemeStore } from "hooks/useThemeStore";
 import { useSearchPageState } from "hooks/useSearchPageState";
 import { useCartControl } from "hooks/useCartControl";
-
+import { DropdownSection } from "./dropdownSection";
 
 export const Navbar = () => {
   const [dropdown, setDropdown] = useState({
@@ -27,6 +27,8 @@ export const Navbar = () => {
   const {cart} = useCartControl();
   // let darkMode;
   // if (mode === "dark") darkMode = true;
+
+ 
   return (
     <>
     <nav className="flex w-full  items-center justify-center bg-white dark:bg-black dark:text-white md:px-[50px] fixed z-10">
@@ -54,37 +56,74 @@ export const Navbar = () => {
                 >
             <Link href={"#"} className="font-gabarito text-gray-900 dark:text-gray-100 font-medium">Category</Link>
             <ChevronDown className="text-gray-900 dark:text-gray-100 font-medium" />
-            <ul className={`dropdown-container grid grid-cols-3 bg-white dark:bg-black dark:text-offWhite-500 absolute top-[100%]  border-t-2 rounded-b-sm border-main-500 left-[50%] transform translate-x-[-50%] min-w-full md:min-w-[400px]  p-3  ${dropdown.category ? 'grid' : 'hidden'}`}>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium" >Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
-                <li>
-                    <Link href={'#'} className="font-noto text-gray-900 dark:text-gray-100 font-medium">Item 1</Link>
-                </li>
+            <ul className={`dropdown-container grid-cols-2 md:grid-cols-3 bg-white dark:bg-black dark:text-offWhite-500 absolute top-[100%] text-[12px] border-t-2 rounded-b-sm gap-2 border-main-500 left-[50%] transform translate-x-[-50%] min-w-full md:min-w-[60vw]  p-3  ${dropdown.category ? 'grid' : 'hidden'}`}>
+                  <DropdownSection
+                          title="Computer and Accessories"
+                          links= {[
+                            {href: '#', label: "Laptops"},
+                            {href: '#', label: "Desktop & Monitors "}, 
+                            {href: '#', label: "Computer Accessories"}, 
+                            {href: '#', label: "Computer Softwares"}, 
+                            {href: '#', label: "PC Gaming "}, 
+                            {href: '#', label: "Projector & Accessories "}, 
+                          ]}
+                        />
+                  <DropdownSection
+                          title="Phones and Tablets"
+                          links= {[
+                            {href: '#', label: "Mobile Phones"},
+                            {href: '#', label: "Phones Accessories "}, 
+                            {href: '#', label: "Tablets"}, 
+                            {href: '#', label: "Tablets Accessories"}, 
+                         
+                          ]}
+                        />
+                  <DropdownSection
+                          title="Fashion"
+                          links= {[
+                            {href: '#', label: "Women Wears"},
+                            {href: '#', label: "Mens Wears "}, 
+                            {href: '#', label: "Women Accessories"}, 
+                            {href: '#', label: "Men Accessories"}, 
+                            {href: '#', label: "Men Shoes"}, 
+                            {href: '#', label: "Women Shoes"}, 
+                         
+                          ]}
+                        />
+                  <DropdownSection
+                          title="Electronics"
+                          links= {[
+                            {href: '#', label: "Televisions"},
+                            {href: '#', label: "Accessories"},
+                            {href: '#', label: "Camera & Photo"},
+                            {href: '#', label: "Audio Systems"},
+                            {href: '#', label: "Game Consoles"},
+                            {href: '#', label: "Vehicle Electronics"},
+                      
+                          ]}
+                        />
+                  <DropdownSection
+                          title="Home & Kitchen"
+                          links= {[
+                            {href: '#', label: "Kitchen Appliances"},
+                            {href: '#', label: "Furniture"}, 
+                            {href: '#', label: "Small Appliances"}, 
+                            {href: '#', label: "Large Appliances"}, 
+                     
+                          ]}
+                        />
+                  <DropdownSection
+                          title="Beauty, Health & Personal Care"
+                          links= {[
+                            {href: '#', label: "Sexual Wellness"},
+                            {href: '#', label: "Skin Care "}, 
+                            {href: '#', label: "Hair Center"}, 
+                            {href: '#', label: "Makeup & body art"}, 
+                            {href: '#', label: "Health "}, 
+                            {href: '#', label: "Dermatological Skincare "}, 
+                          ]}
+                        />
+           
               
             </ul>
 

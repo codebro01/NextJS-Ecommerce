@@ -72,7 +72,7 @@ export default function RootLayout({
 
         <Navbar />
         {searchPageIsOpen && (<SearchPageComponent/>)}
-        <main className="pt-[90px] md:pt-[150px]">
+        <main className="pt-[90px] md:pt-[100px]">
         {children}
 
         </main>
