@@ -11,7 +11,7 @@ import { ResetPasswordComponent } from 'components/resetPasswordComponent'
   return (
      <div className='min-h-[50vh] flex w-full justify-center font-gabarito relative '>
     
-            <form className='w-[250px] md:w-[350px] bg-white dark:bg-black rounded-md p-5 text-[12px] md:text-sm flex flex-col gap-3 shadow-md' >
+            <form className='w-[250px] md:w-[350px] bg-white dark:bg-black rounded-md p-5 text-[12px] md:text-sm flex flex-col gap-3 shadow-xl dark:shadow-neutral-700' >
                 <h2 className="form-header text-center text-xl">Welcome Back!</h2>
                 <div className="signup-with-google flex bg-gray-200 dark:bg-neutral-900 justify-center p-1.5 gap-3 items-center cursor-pointer rounded-sm">
                     <h3 className='text-center'>Login with google</h3>

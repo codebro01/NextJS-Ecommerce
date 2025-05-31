@@ -44,7 +44,7 @@ export const Navbar = () => {
         </div>
         <div className={`md:flex px-5 pt-[10%] md:pt-0 md:mt-0 mt-[65px] w-full   md:px-0 md:items-center md:justify-center md:flex-row flex-col absolute md:relative top-0 left-0 h-[100vh] md:h-auto md:gap-[5%]  md:flex-1/3 ${navActive ? 'flex' : 'hidden'} ${navActive ? 'dark:bg-black bg-offWhite-500' : 'bg-transparent'} `}>
           <div className="link md:order-1 order-3 py-[10px]">
-            <Link href={"#"} className="font-gabarito text-gray-900 dark:text-gray-100 font-medium">Store</Link>
+            <Link href={"/"} className="font-gabarito text-gray-900 dark:text-gray-100 font-medium">Store</Link>
           </div>
           <div className="link flex items-center gap-1 cursor-pointer relative py-[10px] md:py-[20px] md:order-2 order-4 " 
                 onMouseEnter={() => setDropdown((prevState) => {

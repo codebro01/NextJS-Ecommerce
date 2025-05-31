@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { MoveRight } from 'lucide-react';
+import { LinkComponent } from 'components/link';
 
 export const Header = () => {
   return (
@@ -23,14 +24,10 @@ export const Header = () => {
                     <p className="text text-[12px] md:text-[16px] text-neutral-950   dark:text-gray-100 ">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ipsum voluptate asperiores odio iusto ab sapiente dolorem quod odit magnam accusamus animi, eveniet labore commodi quo placeat maiores tenetur magni incidunt nam, fugit autem veritatis? Perspiciatis veritatis dolor consequatur! Eligendi impedit vitae magnam? Ea fugiat delectus recusandae rem magnam doloribus.
                     </p>
-                    <div className="buttons flex gap-5">
-                        <div className="flex items-center gap-2  custom-shadow shop-now bg-main-500 text-gray-900 dark:text-gray-100 px-2 py-1 rounded-[5px] ">
-                            <a>Shop Now</a>
-                            <MoveRight/>
-                        </div>
-                        <div className="shop-now bg-transparent text-main-500 items-center gap-2 shop-now dark:text-gray-100 px-2 py-1 rounded-[5px] border-1 border-main-500 ">
-                            <a>View LifeBook</a>
-                        </div>
+                    <div className="buttons flex gap-5 font-gabarito">
+                        <LinkComponent bg='bg-green-600' href='/' name='Shop now!' />
+                        <LinkComponent bg='bg-main-500' href='/' name='View Lifebook' />
+                   
                     </div>
             </div>
             <div className=" flex items-start justify-center header-right basis-[50%] ">
